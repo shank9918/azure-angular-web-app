@@ -3,8 +3,8 @@
     "clientId": "30daacd0-b83b-4da0-85b0-4974f6886fee",
     "authority": "https://login.microsoftonline.com/common",
     "validateAuthority": true,
-    "redirectUri": "http://localhost:8080/",
-    "postLogoutRedirectUri": "http://localhost:8080/",
+    "redirectUri": "https://angular-web-app.azurewebsites.net",
+    "postLogoutRedirectUri": "https://angular-web-app.azurewebsites.net",
     "navigateToLoginRequestUrl": true
   },
   "cache": {
@@ -18,7 +18,7 @@
   },
   "resources": {
     "todoListApi": {
-      "resourceUri": "http://localhost:8080/todo",
+      "resourceUri": "https://spring-boot-app.azurewebsites.net/todo",
       "resourceScope": "api://30daacd0-b83b-4da0-85b0-4974f6886fee/user_access"
     }
   }
