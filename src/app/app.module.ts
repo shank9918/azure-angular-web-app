@@ -23,7 +23,6 @@ import {HomeComponent} from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TodoService} from './todo.service';
-import {MsalComponent} from './msal/msal.component';
 
 // checks if the app is running on IE
 export const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
@@ -67,8 +66,7 @@ function MSALAngularConfigFactory(): MsalAngularConfiguration {
     AppComponent,
     TodoViewComponent,
     TodoEditComponent,
-    HomeComponent,
-    MsalComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -103,26 +101,9 @@ function MSALAngularConfigFactory(): MsalAngularConfiguration {
     },
     MsalService,
     TodoService
-  ],
-  entryComponents: [
-    AppComponent,
-    MsalComponent
-  ]
+  ], bootstrap: [AppComponent]
 })
-export class AppModule implements DoBootstrap {
+export class AppModule {
   constructor() {
-    console.log('APP Module Constructor!');
-  }
-
-  // tslint:disable-next-line:typedef
-  ngDoBootstrap(ref: ApplicationRef) {
-    if (window !== window.parent && !window.opener) {
-      console.log('Bootstrap: MSAL');
-      ref.bootstrap(MsalComponent);
-    } else {
-      // this.router.resetConfig(RouterModule);
-      console.log('Bootstrap: App');
-      ref.bootstrap(AppComponent);
-    }
   }
 }
