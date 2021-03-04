@@ -1,7 +1,7 @@
 {
   "auth": {
-    "clientId": "30daacd0-b83b-4da0-85b0-4974f6886fee",
-    "authority": "https://login.microsoftonline.com/common",
+    "clientId": "96b9d327-0d9b-45b8-8a33-8e4624614715",
+    "authority": "https://login.microsoftonline.com/36629bb3-ed1f-45cb-83cb-467bcc57e49e/",
     "validateAuthority": true,
     "redirectUri": "https://angular-web-app.azurewebsites.net",
     "postLogoutRedirectUri": "https://angular-web-app.azurewebsites.net",
@@ -13,13 +13,14 @@
   "scopes": {
     "loginRequest": [
       "openid",
-      "profile"
+      "profile",
+      "user_access"
     ]
   },
   "resources": {
     "todoListApi": {
       "resourceUri": "https://spring-boot-app.azurewebsites.net/todo",
-      "resourceScope": "api://30daacd0-b83b-4da0-85b0-4974f6886fee/user_access"
+      "resourceScope": "17912c9f-3aa5-4dc1-97f5-016255cb8a3b/user_access"
     }
   }
 }
